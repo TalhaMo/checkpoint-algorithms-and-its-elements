@@ -1,0 +1,23 @@
+ALGORITHM sentence_length
+VAR
+    sentence[] : STRING;
+    long : INTEGER;
+    vowels: INTEGER :=0;
+    count_word: INTEGER:=0;
+CONST  
+    space : CHAR :=' '
+    point : CHAR :='.'    
+BEGIN
+    Read(sentence[]);
+    long := length(sentence[]);
+    Write (long);
+    FOR i FROM 0 TO long-1 STEP 1  DO
+        if (sentence[i]='a' OR sentence[i]='A' OR sentence[i]='i' OR sentence[i]='I' OR sentence[i]='O' OR sentence[i]='O' OR sentence[i]='U' OR sentence[i]='u' OR sentence[i]='E' OR sentence[i]='e') THEN
+        vowels := vowels+1;
+    END_FOR
+            Write(vowels);
+    WHILE (sentence[i]='space' OR sentence[i]=point) DO
+            count_word := count_word+1;
+    END_WHILE
+            Write(count_word);
+END
